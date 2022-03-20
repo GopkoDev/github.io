@@ -184,10 +184,6 @@
   font-family: Rubik;
 }
 
-body {
-  position: relative;
-}
-
 .container {
   width: 100%;
   max-width: 1050px;
@@ -195,18 +191,32 @@ body {
   margin: 0 auto;
 }
 
-.main-screen {
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  background-color: #353353;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header__logo {
+  font-size: 36px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.main-screen__wrapper {
-  height: 100vh;
+.header__logo span {
+  color: #ff4c60;
+}
+
+.footer {
+  color: #9c9ab3;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer__location {
+  margin-top: 5px;
+}
+
+.footer__location::before {
+  margin-right: 10px;
+}
+
+.main-screen {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -221,71 +231,7 @@ body {
           justify-content: center;
 }
 
-.menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  max-width: 350px;
-  height: 100vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 40%;
-          flex: 1 0 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 50px;
-}
-
-.menu__logo {
-  font-size: 36px;
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.menu__logo span {
-  color: #ff4c60;
-}
-
-.menu__list ul {
-  color: #ffffff;
-  margin: 0;
-  padding-left: 0;
-}
-
-.menu__list li {
-  list-style: none;
-  padding: 8px 0;
-  font-size: 18px;
-}
-
-.menu__list li::before {
-  margin-right: 10px;
-  color: #ffd15c;
-}
-
-.menu__list li:hover {
-  color: #ffd15c;
-  cursor: pointer;
-  -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.menu__copyright {
-  color: #9c9ab3;
-  font-size: 14px;
-}
-
-.burron {
+.button {
   background-color: #ff4c60;
   color: #ffffff;
   border: none;
@@ -298,7 +244,7 @@ body {
   transition: 0.3s;
 }
 
-.burron:hover {
+.button:hover {
   cursor: pointer;
   -webkit-animation: pulse 1s infinite;
           animation: pulse 1s infinite;
@@ -352,6 +298,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 350px;
 }
 
 .owner-card__ava {
@@ -404,24 +351,62 @@ body {
   margin: 24px 0 0 0;
 }
 
-@media (max-width: 1050px) {
-  .menu {
-    padding: calc(10px + 40 * ((100vw - 320px) / 730));
-  }
+.owner-card__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px;
+}
 
-  .menu__logo {
+.owner-card__contacts a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.owner-card__contacts a:before {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.owner-card__contacts a:last-child {
+  margin-top: 5px;
+}
+
+.owner-card__contacts a:hover {
+  color: #ffd15c;
+}
+
+.body {
+  background-color: #353353;
+  height: 100vh;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 1050px) {
+  .header__logo {
     font-size: calc(16px + 20 * ((100vw - 320px) / 730));
   }
 
-  .menu__list li {
-    font-size: calc(12px + 6 * ((100vw - 320px) / 730));
-  }
-
-  .menu__copyright {
+  .footer {
     font-size: calc(10px + 4 * ((100vw - 320px) / 730));
   }
 
-  .burron {
+  .button {
     font-size: calc(13px + 3 * ((100vw - 320px) / 730));
   }
 
@@ -435,5 +420,13 @@ body {
 
   .owner-card__social {
     font-size: calc(20px + 5 * ((100vw - 320px) / 730));
+  }
+
+  .owner-card__contacts a {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 730));
+  }
+
+  .owner-card__contacts a:before {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 730));
   }
 }
