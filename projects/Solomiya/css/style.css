@@ -365,7 +365,7 @@
 .owner-card__contacts a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-style: 18px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -385,6 +385,7 @@
 }
 
 .body {
+  padding: 15px;
   background-color: #353353;
   height: 100vh;
   min-height: 100%;
@@ -399,15 +400,11 @@
 
 @media (max-width: 1050px) {
   .header__logo {
-    font-size: calc(16px + 20 * ((100vw - 320px) / 730));
+    font-size: calc(24px + 12 * ((100vw - 320px) / 730));
   }
 
   .footer {
     font-size: calc(10px + 4 * ((100vw - 320px) / 730));
-  }
-
-  .button {
-    font-size: calc(13px + 3 * ((100vw - 320px) / 730));
   }
 
   .owner-card__title {
@@ -416,17 +413,5 @@
 
   .owner-card__subtitle {
     font-size: calc(13px + 3 * ((100vw - 320px) / 730));
-  }
-
-  .owner-card__social {
-    font-size: calc(20px + 5 * ((100vw - 320px) / 730));
-  }
-
-  .owner-card__contacts a {
-    font-size: calc(12px + 6 * ((100vw - 320px) / 730));
-  }
-
-  .owner-card__contacts a:before {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 730));
   }
 }
