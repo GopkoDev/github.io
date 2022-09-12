@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220913010704">
+    <title>Dash</title>
+</head>
+    <body>
+        <style>
+            *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+            all: unset;
+            display: revert;
+            }
+            *,
+            *::before,
+            *::after {
+            box-sizing: border-box;
+            }
+            a {
+            cursor: revert;
+            }
+            ol, ul, menu {
+            list-style: none;
+            }
+            img {
+            max-width: 100%;
+            }
+            table {
+            border-collapse: collapse;
+            }
+            textarea {
+            white-space: revert;
+            }
+            :where([hidden]){
+            display:none;
+            }
+            :where([contenteditable]){
+            -moz-user-modify: read-write;
+            -webkit-user-modify: read-write;
+            overflow-wrap: break-word;
+            -webkit-line-break: after-white-space;
+            }
+            :where([draggable="true"]) {
+            -webkit-user-drag: element;
+            }
+        </style>
+        <header></header>
+        <main>
+            <section class="data">
+                <div class="clock block">
+                    <p>00:00</p>
+                    <p>Saturday, 10 september</p>
+                </div>
+                <div class="currency block">
+                    <p>36.97<span>USD</span></p>
+                    <p>40.22<span>EUR</span></p>
+                    <picture><source srcset="img/icons/currency.webp" type="image/webp"><img src="img/icons/currency.png" alt="currency"></picture>
+                </div>
+                <div class="greeting block">
+                    <p>HI Dmytro</p>
+                    <picture><source srcset="img/icons/settings.webp" type="image/webp"><img src="img/icons/settings.png" alt="gears"></picture>
+                </div>
+            </section>
+            <section class="clockify_data">
+                <div class="tracker block">
+                    <div class="tracker__buttons">
+                        <button type="button">START</button>
+                        <button type="button">STOP</button>
+                    </div>
+                    <p>00:00:00</p>
+                    <picture><source srcset="img/icons/timer.webp" type="image/webp"><img src="img/icons/timer.png" alt="timer"></picture>
+                </div>
+                <div class="total_data">
+                    <div class="total_item block">
+                        <p>Today Total:</p>
+                        <p>00:00:00</p>
+                        <picture><source srcset="img/icons/watch.webp" type="image/webp"><img src="img/icons/watch.png" alt="send_watch"></picture>
+                    </div>
+                    <div class="total_item block">
+                        <p>Week Total:</p>
+                        <p>00:00:00</p>
+                        <picture><source srcset="img/icons/watch.webp" type="image/webp"><img src="img/icons/watch.png" alt="send_watch"></picture>
+                    </div>
+                    <div class="total_item block">
+                        <p>Month Total:</p>
+                        <p>00:00:00</p>
+                        <picture><source srcset="img/icons/watch.webp" type="image/webp"><img src="img/icons/watch.png" alt="send_watch"></picture>
+                    </div>
+                    <div class="total_item block">
+                        <p>Money per month:</p>
+                        <p>999'999 <span>$</span></p>
+                        <picture><source srcset="img/icons/money-bag.webp" type="image/webp"><img src="img/icons/money-bag.png" alt="send_watch"></picture>
+                    </div>
+                </div>
+            </section>
+            <section class="third_row">
+                <section class="weather block">
+                    <picture><source srcset="img/weather_icons/clouds.webp" type="image/webp"><img src="img/weather_icons/clouds.png" alt=""></picture>
+                   <div class="weather_current">
+                        <p class="weather_location">Kiyv, Ukraine</p>
+                        <div class="weather_data_wrapper">
+                            <p>12°C</p>
+                            <div class="weather_current_data">
+                                <p>Cloudy</p>
+                                <p>HUMIDITY: 58 %</p>
+                                <p>Wind: 7 km/h</p>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="weather_forecast">
+                        <div class="weather_day block">
+                            <p class="title">Today</p>
+                            <p class="max">12°C</p>
+                            <p class="min">9°C</p>
+                            <picture><source srcset="img/weather_icons/sun_rain_clouds.webp" type="image/webp"><img src="img/weather_icons/sun_rain_clouds.png" alt="sun_rain_clouds"></picture>
+                        </div>
+                        <div class="weather_day block">
+                            <p class="title">Sun</p>
+                            <p class="max">12°C</p>
+                            <p class="min">9°C</p>
+                            <picture><source srcset="img/weather_icons/sun_cluds.webp" type="image/webp"><img src="img/weather_icons/sun_cluds.png" alt="sun_cluds"></picture>
+                        </div>
+                        <div class="weather_day block">
+                            <p class="title">Mon</p>
+                            <p class="max">12°C</p>
+                            <p class="min">9°C</p>
+                            <picture><source srcset="img/weather_icons/sun.webp" type="image/webp"><img src="img/weather_icons/sun.png" alt="sun"></picture>
+                        </div>
+                        <div class="weather_day block">
+                            <p class="title">Wed</p>
+                            <p class="max">12°C</p>
+                            <p class="min">9°C</p>
+                            <picture><source srcset="img/weather_icons/rain_snow_moon.webp" type="image/webp"><img src="img/weather_icons/rain_snow_moon.png" alt="rain_snow_moon"></picture>
+                        </div>
+                        <div class="weather_day block">
+                            <p class="title">Thr</p>
+                            <p class="max">12°C</p>
+                            <p class="min">9°C</p>
+                            <picture><source srcset="img/weather_icons/wind.webp" type="image/webp"><img src="img/weather_icons/wind.png" alt="wind"></picture>
+                        </div>
+                   </div>
+                </section>
+            </section>
+        </main>
+        <footer></footer>
+        <script src="js/app.min.js?_v=20220913010704"></script>
+    </body>
+</html>
+
